@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" />  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome icon library -->
+    
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+    />
+    
+    <!-- . is in the current working directry while .. means step out of this current directory -->
+    <link rel="stylesheet" href="../Css/dog.css">
+    <script defer src="../JS/dogpage.js"></script> 
+
+
+
+    <title>BREEDS</title>
+</head>
+<body>
+    <!-- what the user can see will be in the body -->
+<!-- General wrapper -->
+<div class="wrapper">
+    <!-- then advert goes inside this div -->
+    <div class="Login">
+        <!-- inside advert lets have h6-->
+        <!-- <h6>Login</h6> -->
+        <h6 class="LOGIN"><li><a href=LPAGE.html>Login</a></li></h6>
+        
+        
+    </div>
+    <!-- end of advert -->
+    <!-- navigation -->
+    <nav class="nav nav_header">
+        <!-- inside nav we want to list items -->
+    <ul>
+        <li><a href="doghome.html">K9Kounty</a></li>
+        <!-- <li><a href="./carPage.html">HOME</a></li> -->
+        <li><a href="./Breeds.html">BREEDS</a></li>
+        <li><a href="./About.html">ABOUT K9KOUNTY</a></li>
+        <li><a href="./Match.html">MATCH FOUNDER</a></li>
+        <li><a href="./Feature.html">FEATURES</a></li>
+         <!-- <li><a href="./Pricing.html">PRICING</a></li> -->
+        
+        <li>
+            <a href="./cart.html">
+                <div class="cart-container">
+<!-- another div comes inn here as cart container -->
+    <!-- icon and cart count. check fa cart+ on net to get cart icon-->
+    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+    <div class="cart-count">0</div>
+    </div>
+    </a>
+</li>
+</ul>
+</nav>
+  </header>
+  <main>
+    <section id="questionnaire">
+      <h2>Tell Us About Yourself</h2>
+      <form id="userForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+        <label for="age"><br>Age:</label>
+        <input type="text" id="name" required><br>
+        <label for="e-mail"><br>E-mail:</label>
+        <input type="text" id="e-mail" required><br>
+        <label for="address"><br>address:</label>
+        <input type="number and text" id="address" required><br>
+        <!-- Add more questionnaire fields as needed -->
+        
+        <br><button type="submit">Find Matches</button>
+      </form>
+    </section>
+    <section id="matches" style="display: none;">
+      <h2>Matches</h2>
+      <div id="matchResults"></div>
+    </section>
+  </main>
+  
+    <!-- end of general wrapper -->
+  
+  <script>
+    // JavaScript Code
+    const userForm = document.getElementById('userForm');
+    const matchResults = document.getElementById('matchResults');
+    
+    userForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const formData = new FormData(userForm);
+      const userName = formData.get('name');
+      const userAge = formData.get('age');
+      // Collect other form data as needed
+      
+      // Simulate fetching matches (replace with actual API call)
+      const matches = [
+        { name: 'Buddy', breed: 'Golden Retriever', age: 3 },
+        { name: 'Max', breed: 'German Shepherd', age: 2 },
+
+
+        { name: 'Bingo', breed: 'Airedale Terrier', age: 4 },
+        { name: 'Mag', breed: 'Beagle Dog', age: 3},
+
+        { name: 'Layla', breed: 'Chihuahua Dog', age: 3 },
+        { name: 'Boar', breed: 'French-bulldog', age: 4},
+        // Add more matches as needed
+      ];
+      
+      // Display matches
+      matchResults.innerHTML = '';
+      matches.forEach(match => {
+        const matchCard = document.createElement('div');
+        matchCard.classList.add('match-card');
+        matchCard.innerHTML = `
+          <h3>${match.name}</h3>
+          <p>Breed: ${match.breed}</p>
+          <p>Age: ${match.age}</p>
+          <!-- Add more match details -->
+        `;
+        matchResults.appendChild(matchCard);
+      });
+      
+      // Show matches section
+      document.getElementById('matches').style.display = 'block';
+    });
+  </script>
+
+  <footer>
+    <h2>K9KOUNTY</h2>
+    <ul>
+        <li>
+            <a href="#">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+    </a>
+</li>
+<li>
+    <a href="#">
+    <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+</a>
+<li>
+  <a href="https://www.github.com/Abiolaogunwale">
+  <i class="fa-brands fa-github" aria-hidden="true"></i>
+</a>
+</li>
+</li>
+    </ul>
+</footer>
+<!-- end of footer -->
+
+  <!-- end of footer -->
+</body>
+</html>
