@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>K9kounty</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="menubar">
+          <ul>
+            <li><a href="index.html"><img src="images/k9k_logo.png"></a></li>
+            <li><a href="about-us.html">about</a></li>
+            <li><a href="#">services</a>
+              <div class="menubar1">
+                <ul>
+                  <li><a href="ads.php">trade</a></li>
+                  <li><a href="ads.php">mate</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="grid-container-iframe">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.5962223658084!2d3.398493114017322!3d6.4458578953365935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b22f8692b7f%3A0x306f87b50f0b4ede!2sTBS%20Terminal!5e0!3m2!1sen!2sng!4v1598488140755!5m2!1sen!2sng" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+        <div class="grid-container-contact">
+          <div class="grid-item-contact">
+            <h5>K9kounty LTD</h5><br><br>
+            <h6>ADDRESS</h6>
+            <p>1, Tafawa Balewa Square</p>
+            <p>Lagos State, Nigeria.</p><br>
+            <h6>CONTACT</h6>
+            <p><b>Email:</b>  abcdef@gmail.com</p>
+            <p><b>Phone:</b>  0801 234 5678</p><br>
+            <h6>OPENING HOURS</h6>
+            <p>24/7</p>
+
+          </div>
+          <div class="grid-item-contact">
+            <h5>GET IN TOUCH</h5><br>
+            <p>Our helpline is always opened for your feedbacks and inquiries. Kindly drop your messages <br>below and be rest assured that we would get back to you as soon as possible.</p><br><br>
+            <form class="" action="CONTACT.html" method="post">
+              <label for="fname">First name</label><br>
+              <input type="text" id="fname" name="fname" required autocomplete="on"><br>
+              <label for="lname">Last name</label><br>
+              <input type="text" id="lname" name="lname" required autocomplete="on"><br>
+              <label for="email">Email</label><br>
+              <input type="email" id="email" name="email" required autocomplete="on"><br>
+              <label for="phone">Phone No</label><br>
+              <input type="tel" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" placeholder="0800-123-4567"required autocomplete="on"><br>
+              <label for="message">Message</label><br>
+              <textarea id="message" name="message" rows="10" cols="80"></textarea><br>
+              <input type="submit" value="Send">
+            </form>
+          </div>
+        </div>
+
+    </main>
+
+  <footer class="content">
+    <div class="section">
+      <div class="quicklinks">
+        <h4>QUICKLINKS</h4>
+        <a href="index.html"><li>Home</li></a>
+        <a href="about-us.html"><li>About Us</li></a>
+        <a href="contact.html"><li>Contact</li></a>
+      </div>
+    </div>
+    <div class="section">
+      <div class="services">
+        <h4>SERVICES</h4>
+        <a href="ads.php"><li>Trading</li></a>
+        <a href="ads.php"><li>Mating</li></a>
+      </div>
+    </div>
+    <div class="section">
+      <div class="follow">
+        <h4>CONNECT</h4>
+        <a href="#" target="_blank"><img src="icons/facebook.png"></a>
+        <a href="#" target="_blank"><img src="icons/instagram1.png"></a><br>
+        <a href="#" target="_blank"><img src="icons/x.png"></a>
+        <a href="#"><img src="icons/google.png"></a>
+      </div>
+
+<button onclick="topFunction()" id="myBtn" title="Back to top"><img src="icons/arrow-up.png"></i>
+</button>
+<script>
+  var mybutton= document.getElementById("myBtn");
+  window.onscroll= function () {scrollFunction()};
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton,style.display = "block";
+  } else {
+    mybutton.style.display = "block";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+    </div>
+  </footer>
+  <footer class="bottom">
+    celebrazioni.com &copy; | Designed by ac3k33d.
+  </footer>
+</body>
+</html>

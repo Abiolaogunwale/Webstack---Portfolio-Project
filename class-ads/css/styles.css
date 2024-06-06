@@ -1,0 +1,110 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+main {
+    padding: 1em;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    width: auto;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.signup-button, .login-button, .post-ads-button, .search-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    width: 100px;
+}
+
+.signup-button:hover, .login-button:hover {
+    background-color: #0056b3;
+  }
+
+.ads-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.ad-item {
+    border: 1px solid #ddd;
+    padding: 1em;
+    background-color: #fff;
+    width: calc(33% - 1em);
+    box-sizing: border-box;
+}
+
+.ad-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form select {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 300px;
+}
+
+#contactInfo {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.toggle-button {
+    margin-bottom: 1em;
+    padding: 0.5em 1em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-button:hover {
+    background-color: #555;
+}
