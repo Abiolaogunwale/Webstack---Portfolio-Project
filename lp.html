@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>k9kounty</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('image/landing_page.png'); /* Replace 'background-image.jpg' with your image file */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .logo-container {
+            margin-bottom: 0;
+        }
+
+        .logo-container img {
+            width: 200px; /* Adjust the width of the logo as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .tagline {
+            font-size: 1.5em;
+            margin: 0;
+            color: black;
+            font-weight: bold;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .about-us {
+            flex: 1;
+            text-align: left;
+            padding-right: 10px;
+            padding-left: 20px;
+            margin-right: 10px;
+            margin-top: 50px;
+        }
+
+        .about-us h2 {
+            margin-top: 0;
+            color: rgb(18, 235, 11);
+            font-weight: bold;
+            font-size: 60px;
+        }
+
+        .about-us p {
+            font-size: 20px;
+            color: rgb(201, 182, 15); /* Adjust the font size of the paragraphs */
+            font-weight: bold;
+        }
+
+        .form-container {
+            flex: 1;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* White background with opacity */
+            padding: 20px;
+            border-radius: 10px;
+            margin-right: 40px;
+            margin-left: 190px;
+        }
+
+        .form-container h1 {
+            color: black;
+        }
+
+        .form-container p {
+            color: black;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 80%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="images/k9k_logo.png" alt="Logo"> <!-- Replace 'logo.png' with your logo file -->
+        <p class="tagline">Connecting Canine Companions.</p>
+    </div>
+    <div class="content">
+        <div class="about-us">
+            <h2>At K9Kounty, we help...</h2>
+            <p>Connect Dog breeders, buyers and sellers.</p>
+            <p>Find the perfect match for your furry companion.</p>
+            <p>Access a wealth of educational resources, articles and guides on responsible breeding, dog care, training tips and more.</p>
+        </div>
+        <div class="form-container">
+            <h1>Welcome to K9Kounty</h1>
+            <p>Sign up to get started</p>
+            <!--<form action="process_form.php" method="post">-->
+                <form action="process_lp_form.php" method="post">
+                <input type="text" id="name" name="name" placeholder="Your Name" required><br>
+                <input type="email" id="email" name="email" placeholder="Your Email Address" required><br>
+                <input type="submit" value="Get Started">
+            </form>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector("form").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent the form from submitting normally
+
+                // You can perform validation or further processing here
+                
+                // Redirect to index.html
+                window.location.href = "index.html";
+            });
+        });
+    </script>
+</body>
+</html>
